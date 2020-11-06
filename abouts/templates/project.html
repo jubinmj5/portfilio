@@ -1,0 +1,27 @@
+{% extends 'theme2.html' %}
+
+{% block cont%} MY PROJECTS {% endblock%}
+
+{% block content1 %}
+<div class="container">
+    <div class="row" style="height: 250px;">
+{% for project in projects %}
+    <div class="col-md-5">
+
+    <div class="card" >
+        <img src="./images{{ BASIC_DIR }}/{{project.image}}" style="height: 200px;" class="card-img-top" alt="{{ project.title }}">
+        <div class="card-body" >
+          <h6 class="card-title" style="color:crimson;">{{ project.title }}</h6>
+          <p class="card-text">{{ project.description }}</p>
+          <a href="{{   project.urlls  }}" class="btn btn-primary">View site</a>
+        </div>
+      </div>
+    </div>
+
+{% endfor %}
+
+    </div>
+</div>
+
+{% endblock %}</p>
+

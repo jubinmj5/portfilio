@@ -1,0 +1,21 @@
+{% extends 'theme2.html' %}
+
+{% block cont%} MY RESUME {% endblock%}
+
+{% block content1 %}
+<div class="container" style="height: 90%;width: 70%;">
+<table class="table table-striped">
+<tbody>
+{% for img in images %}
+<tr>
+    <td>{{img.title}}</td>
+    <td><img src="./images{{ BASIC_DIR }}/{{img.img}}" height="1080px" width="780px"/></td>
+  </tr>
+
+{% endfor %}
+</tbody>
+</table>	
+</div>
+
+{% endblock %}</p>
+
